@@ -27,14 +27,21 @@ get '/success' do
   HTML
 end
 
-Capybara.javascript_driver = :webkit
 Capybara.run_server = true
 Capybara.app = Sinatra::Application
 
 Capybara::Screenshot.autosave_on_failure = true
 
 feature 'Clicking a fontawesome icon', :js do
-  it 'works' do
+  it 'fails with capybara-webkit' do
+    Capybara.current_driver = :webkit
+    visit '/'
+    find('.fa-times').click
+    expect(page).to have_content 'SUCCESS!'
+  end
+
+  it 'passes with selenium' do
+    Capybara.current_driver = :selenium
     visit '/'
     find('.fa-times').click
     expect(page).to have_content 'SUCCESS!'

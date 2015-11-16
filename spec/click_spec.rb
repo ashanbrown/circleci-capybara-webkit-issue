@@ -31,7 +31,7 @@ Capybara.run_server = true
 Capybara.app = Sinatra::Application
 
 Capybara::Screenshot.autosave_on_failure = true
-Capybara.save_and_open_page_path = 'tmp/screenshots'
+Capybara.save_and_open_page_path = '../tmp/screenshots'
 
 feature 'Clicking a fontawesome icon', :js do
   it 'fails with capybara-webkit' do

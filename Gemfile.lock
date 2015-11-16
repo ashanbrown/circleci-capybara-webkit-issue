@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/ashanbrown/capybara-webkit.git
+  revision: 414863ab71f4809a317afbe8faef3ea898972b4f
+  branch: allow_custom_fonts
+  specs:
+    capybara-webkit (1.7.1)
+      capybara (>= 2.3.0, < 2.6.0)
+      json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -11,9 +20,6 @@ GEM
     capybara-screenshot (1.0.7)
       capybara (>= 1.0, < 3)
       launchy
-    capybara-webkit (1.7.1)
-      capybara (>= 2.3.0, < 2.6.0)
-      json
     childprocess (0.5.8)
       ffi (~> 1.0, >= 1.0.11)
     diff-lcs (1.2.5)
@@ -65,7 +71,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   capybara-screenshot
-  capybara-webkit
+  capybara-webkit!
   rspec
   selenium-webdriver
   sinatra

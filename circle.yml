@@ -1,7 +1,7 @@
 machine:
   ruby:
     version:
-      2.2.1
+      2.2.2
   pre:
     - echo 'ruby-2.2.2' > .ruby-version
     - sudo apt-add-repository -y 'deb http://ppa.launchpad.net/ondrej/mysql-experimental/ubuntu precise main'
@@ -15,7 +15,7 @@ machine:
 
 general:
   artifacts:
-    - "spec/screenshot.*"
+    - "tmp/screenshots"
 
 test:
   override:

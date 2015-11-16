@@ -15,4 +15,8 @@ machine:
 
 general:
   artifacts:
-    - "tmp/capybara/"
+    - "spec/screenshot.*"
+
+test:
+  override:
+    - xvfb-run --auto-servernum bundle exec rspec
